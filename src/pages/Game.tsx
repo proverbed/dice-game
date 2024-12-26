@@ -11,7 +11,7 @@ const Game = () => {
   const [score, setScore] = useState<number>(0);
   const [dice, setDice] = useState<number>(1);
   const [selectedDice, setSelectedDice] = useState<number>(0);
-  const [show, setShow] = useState<boolean>(true);
+  const [show, setShow] = useState<boolean>(false);
 
   return (
     <div className="container mx-auto">
@@ -52,7 +52,7 @@ const Game = () => {
               <div className="grid grid-flow-row gap-2 ">
                 <div className=" ">
                   <button
-                    className="w-full"
+                    className="w-full disabled:shadow-none disabled:opacity-20 disabled:border-slate-200 disabled:bg-slate-50 disabled:pointer-events-none"
                     type="button"
                     disabled={selectedDice == 0}
                     onClick={() => {
